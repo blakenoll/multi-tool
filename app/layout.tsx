@@ -1,7 +1,10 @@
+import React from 'react';
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
+import { Panels } from "@/components/panels"
 import "./globals.css";
+
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,7 +27,11 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased",
         fontSans.variable
       )}>
-        {children}
+        <main className="flex min-h-screen h-full flex-col">
+          <Panels>
+            {children}
+          </Panels>
+        </main>
       </body>
     </html>
   );
