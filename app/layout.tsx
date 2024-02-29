@@ -6,7 +6,7 @@ import { Panels } from "@/components/panels"
 import "./globals.css";
 
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
